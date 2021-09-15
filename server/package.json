@@ -7,10 +7,10 @@
   },
   "scripts": {
     "start": "env-cmd node ./bin/www",
-    "start-heroku": "node ./bin/www"
+    
   },
   "dependencies": {
-    "aws-sdk": "^2.907.0",
+    
     "connect-mongodb-session": "^2.4.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
