@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+
+mat-card-header {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+mat-card-content {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+mat-card-actions button {
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.stepper-buttons {
+    margin-bottom: 1rem;
+}

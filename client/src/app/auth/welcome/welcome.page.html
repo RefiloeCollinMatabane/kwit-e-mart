@@ -1,0 +1,26 @@
+<div class="grid-list">
+    <div class="grid-tile" id="welcome-image">
+        <img src="https://kwik-e-mart.s3.eu-central-1.amazonaws.com/assets/kwik-e-mart.png">
+    </div>
+    <div class="grid-tile" id="welcome-auth">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="grid-tile" id="welcome-stats">
+        <mat-card>
+            <mat-list>
+                <mat-list-item>
+                    {{nProducts$ | async}} products available in {{nCategories$ | async}} categories.
+                </mat-list-item>
+                <mat-list-item>
+                    {{nOrders$ | async}} orders placed so far.
+                </mat-list-item>
+                <mat-list-item *ngIf="!!orderService.getLastOrder()">
+                    Your last order totaled {{orderService.getLastOrder().total | currency}}.
+                </mat-list-item>
+                <mat-list-item *ngIf="!cartService.isEmpty()">
+                    You have {{cartService.getTotalQuantity()}} items in the shopping cart.
+                </mat-list-item>
+            </mat-list>
+        </mat-card>
+    </div>
+</div>
